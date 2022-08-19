@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Authors Login Page</title>
+<LINK rel="stylesheet" type="text/css" href="../StyleSheet1.css">
+<SCRIPT language="JavaScript1.1" type="text/Javascript" src="../FormChek3.js">
+</SCRIPT>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+function clicktime(form) {
+	// validate data:
+	if ((form.Email.value == "")) {
+		alert("Please fill in the email field!");
+		}
+	else {
+   objDate = new Date();
+   // get ms since Jan 1, 1970:
+	 var ms = objDate.getTime();
+   form.timex.value = ms;
+   //alert(ms);
+   form.submit();
+   }
+}
+//-->
+</script>
+</head>
+<body>
+<h3>Authors Login Page</h3>
+<P>If you are an author and have already been contacted by the Editor, you may 
+log in here. </P> 
+<div align="center">
+<table bgcolor="lightgreen" width="500" border="1">
+	<tr><td>
+	<form action="../distr.asp" method="post">
+		<table border="0">
+			<tr><td>
+			<p><b>&nbsp;&nbsp;My Email address: </b>
+			<br>&nbsp;&nbsp;
+			<input name="Email" onfocus="javascript:promptEntry(pEmail)" 
+			onchange="javascript:checkEmail(this,true)" size="48" maxlength="50">&nbsp;</p>
+			</td></tr>
+			<tr><td>
+			<p><b>&nbsp;&nbsp;My Password: </b><br>&nbsp;&nbsp;
+			<input type="password" name="Pw" size="10">
+			<br><input type=checkbox name="nopw" value="1">
+		    &nbsp;Please send my password in an email message.</p>
+			<input type="hidden" name="timex" />
+			<input type="hidden" name="role" value=2 />
+			<input type="button" value="Login" onClick="javascript:clicktime(this.form)">
+			</td></tr>
+		</table>
+	</form>
+	</td></tr>
+</table>
+<br>
+</div>
+
+
+</body>
+</html>

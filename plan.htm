@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<TITLE>Plan</TITLE>
+<LINK rel="stylesheet" type="text/css" href="StyleSheet1.css">
+</HEAD>
+<BODY>
+<H3 class=Section1>Manuscript Review System</H3>
+
+<p class=Section1><STRONG>The purpose of this application 
+is to support the review process for all files submitted for publication in a 
+journal.</STRONG> The application technology is Microsoft ASP 3.0 using 
+VBScript and ADO connections to an Access database on an IIS server.</p>
+<P class=Section1><STRONG>The application has role-based 
+access control, with strict separation between 3 types of users: 
+editors, authors, and reviewers. Here are the functions 
+supported:</STRONG></P>
+
+<P class=Section1><b>Administrators/Editors control:</b> 
+<BLOCKQUOTE>
+  <P class=Section1>Editor data: </P>
+  <DIV class=Section1>
+  <UL>
+<LI>List all Editors 
+    
+<LI>Add Editor 
+    <UL>  
+    
+<LI>Store name and initial password in database 
+    
+<LI>Notify by email</LI></UL>   
+    
+<LI>Delete an Editor</LI></UL></DIV>
+  <P>Author data:</P>
+  <UL>
+<LI>List all Authors 
+    <LI>Add Author 
+    <UL>  
+    
+<LI>Store name and initial password in database 
+    
+<LI>Notify by email</LI></UL>
+    <LI>Delete an Author</LI></UL>
+  <P>Manuscript/file data: </P>
+  <UL>
+<LI>List all files
+    <UL>
+      <LI>Add editor's notes</LI></UL> 
+    
+<LI>Apply MR# to a file  
+    <LI>Close file</LI></UL>
+    </BLOCKQUOTE>
+<BLOCKQUOTE>
+  <P>Reviewer data: </P>
+  <UL>
+<LI>List all Reviewers 
+    <LI>Add Reviewer 
+    <UL>  
+    
+	<LI>Store name and initial password in database 
+	    
+	<LI>Notify by email</LI></UL>
+    <LI>Select and Assign a Reviewer to a MS
+          
+    <UL>     
+    
+<LI>Select by disciplines, indicate workload 
+    
+<LI>Authorize reviewer to download a MS and upload a Review 
+    
+<LI>Add editor's notes</LI></UL>  
+    
+<LI>Delete a Reviewer</LI></UL>
+  <P>Review data: </P>
+  <UL>
+<LI>List all reviews 
+    
+<LI>Add review 
+    <UL>  
+    
+<LI>Add editor's notes</LI></UL>  
+    
+<LI>Close Review</LI></UL>
+  <P>Disciplines data: </P>
+  <UL>
+<LI>List all disciplines 
+    
+<LI>Add discipline</LI></UL>
+  <P>Reminder data: </P>
+  <UL>
+<LI>List reminders 
+    <LI>Send reminder </LI></UL>
+</BLOCKQUOTE>
+<P><STRONG>Authors control:</STRONG>
+<UL>
+<LI>Upload my MS or related files with notes 
+  <LI>  List my MSS and review status 
+  <LI>   Delete my file  </LI></UL>
+<P><STRONG>Reviewers control:</STRONG>
+<UL>
+<LI>List files I have been assigned to review
+  
+<LI>Upload my review with notes 
+  <LI>List my reviews and status 
+  <LI>  Delete my file  </LI></UL>
+<P><STRONG>All Users control:</STRONG>
+<UL>
+<LI>Send my password 
+  
+<LI>Change my password 
+  
+<LI>View documentation</LI></UL>
+
+</BODY>
+</HTML>

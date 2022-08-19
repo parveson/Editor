@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Editors Login Page</title>
+<LINK rel="stylesheet" type="text/css" href="StyleSheet1.css">
+<script language="JavaScript" type="text/Javascript">
+<!-- 
+function clicktime(form) {
+	// validate data:
+	if (form.Email.value == "") {
+		alert("Please fill in email field!");
+		}
+	else {
+   objDate = new Date();
+   // get ms since Jan 1, 1970:
+	 var ms = objDate.getTime();
+   form.timex.value = ms;
+   //alert(ms);
+   form.submit();
+   }
+}
+//-->
+</script>
+</head>
+<body>
+
+<h3>Editor's Login Page</h3>
+<div align="center">
+<table bgcolor="lightgreen" width="500" border="1">
+	<tr><td>
+	<form action="distr.asp" method="post">
+		<table border="0">
+			<tr><td>
+			<p><b>&nbsp;&nbsp;My Email address: </b>
+			<br>&nbsp;&nbsp;
+			<input name="Email" size="48" maxlength="50">&nbsp;
+			</td></tr>
+			<tr><td>
+			<p><b>&nbsp;&nbsp;My Password: </b><br>&nbsp;&nbsp;
+			<input type="password" name="Pw" size=12>
+			<br>
+			<input type=checkbox name="nopw" value="1">
+		&nbsp;Please send my password in an email message.</P>
+			<input type="hidden" name="timex">
+			<input type="hidden" name="role" value=1>
+			<input type="button" value="Login" onClick="javascript:clicktime(this.form)">
+			</td></tr>
+		</table>
+	</form>
+	</td></tr>
+</table>
+<br>
+</div>
+
+<p><a href="authors/default.htm">Go to Authors Login Page</a></p>
+
+<p><a href="reviews/default.htm">Go to Reviewers Login Page</a></p>
+</body>
+</html>

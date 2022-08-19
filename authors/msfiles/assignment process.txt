@@ -1,0 +1,49 @@
+Assignment process, user view:
+
+Assignment is in two stages.  The first stage is for the editor to assign an MR# or Sequence Number (SeqNo) to each file.  The second stage is to assign files to a reviewer.  In order to help distinguish these two actions, the former stage will be called "apply".  
+
+Ideally, the status board should support the following:
+
+1. Apply MR#:
+First show a list of all the files that do not yet have a SeqNo.  The Editor can examine these and select any line item to add a sequence number by clicking on a hyperlink.  The next available SeqNo will be suggested, but if this is an ancillary file for an existing MS, he will not use that value but find the appropriate SeqNo in the list of all MSS under review.  The SeqNo is what keeps all related files together.  It takes some intelligence to do this, so it cannot be automated reliably.
+
+In order to guide the editor in what MR# to apply, show a table that lists all MSS at any stage of the review process until they are archived.  Only initial MS submissions need to be listed, not all the ancillary files.  These are the first ones to be submitted on a given title, and they have a SeqNo applied by the editor.  Every other file that is submitted later and related to this title will be given the same SeqNo by the editor.  This is a way to keep track of how files are related.  
+	(Alternatively, the author could be responsible for relating new uploads to the right SeqNo.  But that is more complicated and will be deferred. For now, just ask the author to include a hint saying what title the ancillary file goes with. )
+
+2. Assign a Reviewer to an MR# (MS and all its related files):
+
+3. First display a table showing all MSS assigned, and to whom.  Sort in order of SeqNo, so if there is more than one reviewer they are listed together.  Each assignment is listed on a separate line.
+4. A color indicator indicating the status of each assignment. 
+None = gray. 
+5. The sequence number, based on MS submit date order.  This might also have a color indicator indicating the time since submission.  
+6. Hyperlinks to MS details and assignment button on each row.
+
+7. A table listing the assignment data on this MS, which is in a separate table underneath the list of all the files associated with the main MS.  
+
+----
+
+Editor views statusboard, clicks on an "assign" button on the list of MSS.  (Some have no assignments, some may have 1, 2, or 3 or even more).  
+
+This click will open a popup window with details about the MS. This window stays open until closed manually.  This window also contains a form where the SeqNo can be entered; the next number is already in the box.  
+
+This window has a button "Click to assign this MS".  When the editor clicks on this, it stores the SeqNo in the MS database and returns control to the main window and jumps to the list of reviewers.  The popup window stays up to remind the editor what manuscript is being assigned. 
+
+The Assign page lists all reviewers, sorted by:
+	relevance of discipline/expertise to MS
+	reviewers with no pending reviews
+	reviewers with fewest past reviews
+	reviewers with shortest average wait times
+(Note: when reviewers sign up, they can indicate up to 3 areas of expertise.  These are taken from the SAME list of disciplines that the author selected for the MS.  This allows an easy way to match them.)
+
+Details about each reviewer may be seen by clicking on the reviewer's name, which pops up a window that shows the bio, photo and other details of the reviewer.  
+
+To assign one of the reviewers, the editor clicks on a radio button to select this reviewer, then clicks submit.  (Option: put a button on each line of the form, so that the user won't have to scroll all the way to the end to see the submit button.)
+
+A confirm page shows what is to be done, and asks for confirmation.  If confirmed, the page sends an email to the reviewer and stores the assignment data in the database.  
+This sets the assignment review days value to 1.  It is updated every time the status board is opened for viewing.  This variable is used to set the colors on the status board.
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<TITLE>Processes</TITLE>
+<LINK rel="stylesheet" type="text/css" href="StyleSheet1.css">
+</HEAD>
+<BODY>
+<H3>Processes</H3>
+<P><STRONG>Assignment process, user view:</STRONG></P>
+<P> Assignment is in two stages. The first stage is for the editor to assign 
+an MR# or Sequence Number (SeqNo) to each file. The second stage is to assign 
+files to a reviewer. In order to distinguish these two actions, the former stage 
+will be called "apply". </P>
+<P>The <STRONG>status board</STRONG> is the main working page for the 
+Editor.  It should support the following: </P>
+<P><STRONG>1. Apply MR#:</STRONG> <BR>First show a list of all the files that do 
+not yet have a SeqNo. The Editor can examine these and select any line item to 
+add a sequence number by clicking on an "apply" hyperlink. The next available 
+SeqNo will be suggested, but if this is an ancillary file for an existing MS, he 
+will not use that value but find the appropriate SeqNo in the list of all MSS 
+under review. The SeqNo is what keeps all related files together. It takes some 
+intelligence to do this, so it cannot be automated reliably. </P>
+<P>In order to guide the editor in what MR# to apply, the system shows a table that lists 
+all MSS at any stage of the review process until they are archived. Only initial 
+MS submissions need to be listed, not all the ancillary files. These are the 
+first ones to be submitted on a given title, and they have a SeqNo applied by 
+the editor. Every other file that is submitted later and related to this title 
+will be given the same SeqNo by the editor. This is a way to keep track of how 
+files are related. </P>
+<P><STRONG>2. Assign a Reviewer to an MR# (MS or any of its related files): 
+<BR></STRONG> Editor views status board, showing the list of all MSS 
+available for review (have MR#). He clicks on an "assign" link on the list of MSS. (Some 
+have no assignments, some may have 1, 2, or 3 or even more). </P>
+<P>This click will open the Assign page with details about 
+the MS at the top. This serves to remind the editor what manuscript is being 
+assigned. Below this is a form where all of the reviewers are listed in a table. 
+The table (select_reviewer.asp) lists all reviewers, sorted by: <BR>1. 
+relevance of discipline/expertise to MS <BR>2. reviewers with no pending reviews 
+<BR>3. reviewers with fewest past reviews <BR>4. reviewers with shortest average 
+wait times <BR><BR>               
+  (Note: when reviewers sign up, they can indicate up to 5 areas 
+of expertise. These are taken from the SAME list of 95 disciplines that the author selected for 
+the MS. This allows an easy way to match them.) </P>
+<P>Details about each reviewer may be seen by clicking on the 
+reviewer's name, which pops up a window that shows the CV, academic interests and other details of the 
+reviewer. </P>
+<P>If a reviewer is also the author of the MS to be assigned, his/her name is 
+listed, but there is no checkbox so that reviewer cannot be assigned to this MS. 
+</P>
+<P>The last column in the table is a Select checkbox.  Reviewers who have 
+already been assigned to this MS (if any) show checkboxes that are already 
+checked.  </P>
+<P>To assign one OR MORE of the reviewers, the editor clicks on a checkbox to 
+select them, then clicks the Submit button at the bottom of the list. </P>
+<P>A confirm page shows what is to be done, and asks for confirmation. If confirmed, 
+the page sends an email notification to the reviewer(s) and stores the assignment 
+data in the database. </P>
+<P>This sets the assignment review days value for each assigned reviewer to 1. 
+It is updated every time the status board is opened for viewing. This variable 
+is used to set the colors on the status board. </P>
+<P><STRONG>Reminders</STRONG></P>
+<P>The Editor has set a policy that a review should be submitted within 30 
+days after assignment.  If it is late, a reminder is sent.  
+If it is late 60 days, another reminder is sent.  If it is late 
+90 days, a final notification is sent indicating that a new reviewer will soon 
+be selected for the review.  </P>
+<P>The Editor's status board uses dates and a color code to indicate at a glance 
+which reviews are late.  If it has been less than 30 days, the date is 
+green.  Between 30 and 60 days, the date is yellow.  Beyond 60 days, 
+the date is red.  </P>
+<P>The table of Reviews Assigned to Reviewers (pending) 
+shows this color code, and for each file a "Remind" link is provided.  When this is clicked, it opens a 
+page that shows what reminders have already been sent to this reviewer, and how 
+many days have elapsed since the assignment.  This information helps to avoid sending excessive 
+reminders.  A button is provided that if clicked will send an 
+automatic email reminder to this reviewer.   A copy of the message that 
+was sent is provided in the web page for checking. </P>
+<P><STRONG><EM>Please note: The above descriptions are 
+subject to change, and may not correspond to the actual behavior while the 
+system is under development!</EM></STRONG></P>
+
+<P><A href="default.htm">Return to menu</A></P>
+
+</BODY>
+</HTML>

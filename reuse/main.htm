@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<title>Windows</title>
+<META name="date" content="13 Aug 2005">
+<script language="Javascript" type="text/Javascript">
+<!--
+// See Danesh p. 270 for a list of all the properties of the open() method.
+function win(strPath)		
+{
+	window.open("" + strPath,"newWindowName","height=300,width=400,left=20,top=10,toolbar=yes,location=1,directories=yes,menubar=1,scrollbars=yes,resizable=yes,status=yes");
+}
+function printWindow() {
+bV = parseInt(navigator.appVersion);
+if (bV >= 4) window.print();
+}
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+
+<p><A href="javascript:win('popup.htm');">Popup a small window</A></p>
+
+</BODY>
+</HTML>
